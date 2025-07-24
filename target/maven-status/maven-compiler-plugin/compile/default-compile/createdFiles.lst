@@ -1,0 +1,10 @@
+com\rentalmotor\security\WebSecurityConfig.class
+com\rentalmotor\RentalMotorApplication.class
+com\rentalmotor\model\Motor.class
+com\rentalmotor\controller\HomeController.class
+com\rentalmotor\model\User.class
+com\rentalmotor\controller\MotorController.class
+com\rentalmotor\controller\AuthController.class
+com\rentalmotor\service\UserService.class
+com\rentalmotor\repository\UserRepository.class
+com\rentalmotor\repository\MotorRepository.class

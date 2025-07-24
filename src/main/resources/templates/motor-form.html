@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${motor.id != null} ? 'Edit Motor' : 'Tambah Motor'">Form Motor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <h2 th:text="${motor.id != null} ? 'Edit Motor' : 'Tambah Motor'"></h2>
+    <form th:action="@{/motor/save}" method="post">
+        <input type="hidden" name="id" th:value="${motor.id}">
+        <div class="mb-3">
+            <label for="merk" class="form-label">Merk:</label>
+            <input type="text" id="merk" name="merk" class="form-control" th:value="${motor.merk}" required>
+        </div>
+        <div class="mb-3">
+            <label for="jenis" class="form-label">Jenis:</label>
+            <input type="text" id="jenis" name="jenis" class="form-control" th:value="${motor.jenis}" required>
+        </div>
+        <div class="mb-3">
+            <label for="tahun" class="form-label">Tahun:</label>
+            <input type="number" id="tahun" name="tahun" class="form-control" th:value="${motor.tahun}" required>
+        </div>
+        <div class="mb-3">
+            <label for="hargaSewa" class="form-label">Harga Sewa:</label>
+            <input type="number" id="hargaSewa" name="hargaSewa" class="form-control" th:value="${motor.hargaSewa}" step="0.01" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Simpan</button>
+    </form>
+</div>
+</body>
+</html>
